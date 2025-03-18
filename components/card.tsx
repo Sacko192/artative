@@ -1,16 +1,26 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { CiHeart } from 'react-icons/ci'
 import { FaShoppingBag } from 'react-icons/fa'
 import { FaStar } from "react-icons/fa";
 
-const Card = ({art}: any) => {
+interface cardProps {
+  id: number,
+  title: string,
+  img: string,
+  description: string
+  price: number,
+  author: string
+}
+
+const Card = ({art}: {art: cardProps}) => {
   return (
     <div className='flex flex-col rounded-sm shadow-md gap-2 p-3 w-1/5 hover:scale-110 cursor-pointer'>
       <div className='flex-1'>
         <Link href={{pathname: `/details/${art.id}`,
                     
-         }}><img className='rounded-sm h-full w-full' src={art.img} alt="" /></Link>
+         }}><Image className='rounded-sm h-full w-full' src={art.img} alt="" /></Link>
       </div>
       <div>
         <div className='flex gap-2 text-lg justify-end'>

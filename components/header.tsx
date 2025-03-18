@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -20,7 +21,7 @@ const Header = () => {
             <div className='flex gap-2 items-center text-black/80'>
                 <div className='flex gap-2 text-lg items-center'>
                     <FaRegUserCircle/>
-                    <a href=""><h3>S'inscrire / Se connecter</h3></a>
+                    <Link href="/"><h3>S&apos;inscrire / Se connecter</h3></Link>
                 </div>
                 <div className='flex gap-2 text-lg'>
                     <CiHeart/>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
     return (
       <footer className="bg-cyan-700 text-white py-6 w-full">
@@ -15,9 +17,9 @@ export default function Footer() {
                   { name: "Faouzi Boufares" },
                 ].map((artist) => (
                   <li key={artist.name}>
-                    <a className="hover:underline">
+                    <Link href={"/"} className="hover:underline">
                       {artist.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -27,14 +29,14 @@ export default function Footer() {
               <h3 className="text-lg font-medium border-b-2 border-white">Pour les Artistes</h3>
               <ul className="mt-2 space-y-2 cursor-pointer">
                 <li>
-                  <a className="hover:underline">
-                    Rejoindre Artative en tant qu'artiste
-                  </a>
+                  <Link href={"/"} className="hover:underline">
+                    Rejoindre Artative en tant qu&apos;artiste
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:underline">
-                    Se connecter en tant qu'Artiste
-                  </a>
+                  <Link href={"/"} className="hover:underline">
+                    Se connecter en tant qu&apos;Artiste
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -43,40 +45,40 @@ export default function Footer() {
               <h3 className="text-lg font-medium border-b-2 border-white">Service clients</h3>
               <ul className="mt-2 space-y-2 cursor-pointer">
                 <li>
-                  <a className="hover:underline">
+                  <Link href={"/"} className="hover:underline">
                     Nous contacter
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:underline">
+                  <Link href={"/"} className="hover:underline">
                     Expédition
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:underline">
+                  <Link href={"/"} className="hover:underline">
                     Politique de retour
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:underline">
+                  <Link href={"/"} className="hover:underline">
                     +33 01 00 00 00 10
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
   
             <div>
-              <h3 className="text-lg font-medium border-b-2 border-white">À propos d'Artative</h3>
+              <h3 className="text-lg font-medium border-b-2 border-white">À propos d&apos;Artative</h3>
               <ul className="mt-2 space-y-2 cursor-pointer">
                 <li>
-                  <a className="hover:underline">
+                  <Link href={"/"} className="hover:underline">
                     A propos de nous
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener" className="hover:underline">
+                  <Link href={"/"} rel="noopener" className="hover:underline">
                     Magazine Artative
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

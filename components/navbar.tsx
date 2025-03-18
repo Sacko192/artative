@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import {
@@ -11,8 +10,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import Link from "next/link"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -56,7 +55,7 @@ export function Navbar() {
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
-                  <a
+                  <Link
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
@@ -66,11 +65,11 @@ export function Navbar() {
                     <p className="text-sm leading-tight text-muted-foreground">
                     Nous reversons intégralement les recettes de chaque œuvre vendue à des associations caritatives, soutenant ainsi les plus vulnérables et favorisant un changement social positif.
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
               <ListItem className="hover:text-cyan-200" href="/" title="Galerie">
-              Découvrez notre galerie, un espace dédié à l'expression artistique où chaque œuvre raconte une histoire unique et inspire l'émotion.
+              Découvrez notre galerie, un espace dédié à l&apos;expression artistique où chaque œuvre raconte une histoire unique et inspire l&apos;émotion.
               </ListItem>
               <ListItem className="hover:text-cyan-200"  href="/" title="Artistes">
                 Découvrez nos artistes, des talents passionnés qui donnent vie à des œuvres uniques et inspirantes.
