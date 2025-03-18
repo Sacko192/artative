@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 }
 
 
-const page = async  ({params}: {params: Promise<{ slug: string }>}) => {
+const page = async  ({ params }: { params: { id: string } }) => {
 
   const arts = [
     {
@@ -154,9 +154,9 @@ const page = async  ({params}: {params: Promise<{ slug: string }>}) => {
         author: "Faouzi Boufares"
     },
   ]
+
   
-  const { slug } = await params
-  const art = arts.find((x: cardProps) => x.id == slug)
+  const art = arts.find((x: cardProps) => x.id == params.id)
   return (
     <div className='h-screen'>
       <div className="w-full sticky top-0 left-0 px-6">
@@ -164,7 +164,7 @@ const page = async  ({params}: {params: Promise<{ slug: string }>}) => {
       </div>
       <div className='flex gap-4 m-10 mb-10'>
           <div className='flex-1'>
-            {art && <Image className='h-full w-full rounded-lg' src={art?.img} alt="" /> }
+            {art && <Image className='h-full w-full rounded-lg' width={100} height={100} src={`/${art.img}`} alt="" /> }
           </div>
           <div className='flex-1 flex flex-col justify-between'>
             <h1 className='text-5xl text-cyan-700'>{art?.title} </h1>
