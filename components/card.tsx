@@ -18,7 +18,7 @@ const Card = ({art}: {art: cardProps}) => {
   return (
     <div className='flex flex-col rounded-sm shadow-md gap-2 p-3 w-1/5 hover:scale-110 cursor-pointer'>
       <div className='flex-1'>
-        <Link href={{pathname: `/details/${art.id}`}}><Image className='rounded-sm h-full w-full' width={100} height={100} src={`/${art.img}`} alt="" /></Link>
+        <Link href={{pathname: `/details/${art.id}`}}><Image className='rounded-sm h-full w-full' width={100} height={100} src={`public//${art.img}`} alt="" /></Link>
       </div>
       <div>
         <div className='flex gap-2 text-lg justify-end'>
