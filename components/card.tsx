@@ -6,7 +6,7 @@ import { FaShoppingBag } from 'react-icons/fa'
 import { FaStar } from "react-icons/fa";
 
 interface cardProps {
-  id: number,
+  id: string,
   title: string,
   img: string,
   description: string
