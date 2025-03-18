@@ -2,7 +2,6 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Payment from '@/components/payment'
-import Image from 'next/image'
 import React from 'react'
 
 interface cardProps {
@@ -165,7 +164,7 @@ const page = async  ({ params }: {params: Promise<{ id: string }>}) => {
       </div>
       <div className='flex gap-4 m-10 mb-10'>
           <div className='flex-1'>
-            {art && <Image className='h-full w-full rounded-lg' width={100} height={100} src={`public//${art.img}`} alt="" /> }
+            {art && <img className='h-full w-full rounded-lg' width={100} height={100} src={`/${art.img}`} alt="" /> }
           </div>
           <div className='flex-1 flex flex-col justify-between'>
             <h1 className='text-5xl text-cyan-700'>{art?.title} </h1>
