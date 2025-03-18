@@ -14,10 +14,6 @@ interface cardProps {
   author: string
 }
 
-interface PageProps {
-  params: { id: string };
-}
-
 
 export async function generateStaticParams() {
   // Simule une récupération d'IDs (ex: depuis une API ou une base de données)
@@ -27,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 
-const page = async  ({ params }: PageProps) => {
+const page = async  ({ params }: {params: Promise<{ id: string }>}) => {
 
   const arts = [
     {
@@ -160,8 +156,8 @@ const page = async  ({ params }: PageProps) => {
     },
   ]
 
-  
-  const art = arts.find((x: cardProps) => x.id == params.id)
+  const { id } = await params
+  const art = arts.find((x: cardProps) => x.id == id)
   return (
     <div className='h-screen'>
       <div className="w-full sticky top-0 left-0 px-6">
