@@ -14,6 +14,11 @@ interface cardProps {
   author: string
 }
 
+interface PageProps {
+  params: { id: string };
+}
+
+
 export async function generateStaticParams() {
   // Simule une récupération d'IDs (ex: depuis une API ou une base de données)
   const ids = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
@@ -22,7 +27,7 @@ export async function generateStaticParams() {
 }
 
 
-const page = async  ({ params }: { params: { id: string } }) => {
+const page = async  ({ params }: PageProps) => {
 
   const arts = [
     {
