@@ -164,7 +164,7 @@ const page = async  ({ params }: {params: Promise<{ id: string }>}) => {
       </div>
       <div className="flex gap-4 m-10 mb-10">
           <div className="flex-1">
-            {art && <img className="h-full w-full rounded-lg" src={art.img} alt="" /> }
+            {art && <img className="h-full w-full rounded-lg" src={`/${art.img}`} alt="" /> }
           </div>
           <div className="flex-1 flex flex-col justify-between">
             <h1 className="text-5xl text-cyan-700">{art?.title} </h1>
