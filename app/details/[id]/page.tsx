@@ -158,24 +158,24 @@ const page = async  ({ params }: {params: Promise<{ id: string }>}) => {
   const { id } = await params
   const art = arts.find((x: cardProps) => x.id == id)
   return (
-    <div className='h-screen'>
+    <div className="h-screen">
       <div className="w-full sticky top-0 left-0 px-6">
         <Header/>
       </div>
-      <div className='flex gap-4 m-10 mb-10'>
-          <div className='flex-1'>
-            {art && <img className='h-full w-full rounded-lg' src={1.png} alt="" /> }
+      <div className="flex gap-4 m-10 mb-10">
+          <div className="flex-1">
+            {art && <img className="h-full w-full rounded-lg" src={art.img} alt="" /> }
           </div>
-          <div className='flex-1 flex flex-col justify-between'>
-            <h1 className='text-5xl text-cyan-700'>{art?.title} </h1>
-            <p className='text-black/80'><span className='text-cyan-700'>À propos de l&apos;oeuvre</span>: <br />{art?.description}</p>
-            <h3 className='text-2xl text-cyan-700'>{art?.price}€</h3>
-            <div className='h-3/5'>
+          <div className="flex-1 flex flex-col justify-between">
+            <h1 className="text-5xl text-cyan-700">{art?.title} </h1>
+            <p className="text-black/80"><span className="text-cyan-700">À propos de l&apos;oeuvre</span>: <br />{art?.description}</p>
+            <h3 className="text-2xl text-cyan-700">{art?.price}€</h3>
+            <div className="h-3/5">
               <Payment/>
             </div>
           </div>
       </div>
-      <div className='mt-20'>
+      <div className="mt-20">
         <Footer/>
       </div>
     </div>
