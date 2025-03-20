@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "homepage": "https://sacko192.github.io/artative/",
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
