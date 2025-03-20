@@ -158,7 +158,7 @@ const page = async  ({ params }: {params: Promise<{ id: string }>}) => {
 
   const { id } = await params
   const art = arts.find((x: cardProps) => x.id == id)
-  
+
   return (
     <div>
       <Single art={art} img={id} />
