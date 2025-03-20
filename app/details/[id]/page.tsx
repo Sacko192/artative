@@ -1,7 +1,4 @@
 
-import Footer from '@/components/footer'
-import Header from '@/components/header'
-import Payment from '@/components/payment'
 import Single from '@/components/single'
 import React from 'react'
 
